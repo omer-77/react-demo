@@ -11,12 +11,6 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-@media only screen and (max-width: 600px) {
-  .modal {
-    padding-top: 120px;
-  }
-}
-
 .modal-content {
   position: relative;
   background-color: #fefefe;
@@ -81,4 +75,10 @@
 
 .img {
   border-radius: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal {
+    padding-top: 120px;
+  }
 }
