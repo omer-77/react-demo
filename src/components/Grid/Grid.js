@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Card from "../Card/Card";
+import Skeleton from "../Skeleton/Skeleton";
 import styles from "./Grid.module.css";
 
 function Grid() {
@@ -18,7 +19,13 @@ function Grid() {
   }, []);
 
   if (isLoading) {
-    return <div>Loading.....</div>;
+    return (
+      <div className={styles.grid}>
+        {Array.apply(null, { length: 10 }).map((value, index) => {
+          return <Skeleton key={index} />;
+        })}
+      </div>
+    );
   }
 
   return (

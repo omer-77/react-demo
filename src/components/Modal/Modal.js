@@ -4,6 +4,7 @@ function Modal(props) {
   return (
     <>
       <div id="myModal" className={styles.modal}>
+        <div className={styles.backdrop} onClick={props.onClick}></div>
         <div className={styles["modal-content"]}>
           <div className={styles["modal-header"]}>
             <span className={styles.close} onClick={props.onClick}>
